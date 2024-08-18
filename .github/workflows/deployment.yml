@@ -1,5 +1,5 @@
 name: Deploy Project
-on: push
+on: [push, workflow_dispatch]
 jobs:
   #Test Job
   test:
@@ -10,7 +10,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm ci
       - name: Run test
@@ -25,7 +25,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm ci
       - name: Build Project
