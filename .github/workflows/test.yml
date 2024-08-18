@@ -3,7 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    setps:
+    steps:
       - name: Get code form respository
         uses: actions/checkout@v4
       - name: Install NodeJS
